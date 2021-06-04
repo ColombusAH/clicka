@@ -36,7 +36,7 @@
       "projectType": "application",
       "root": "apps/furmans-pizza",
       "sourceRoot": "apps/furmans-pizza/src",
-      "prefix": "furrmans",
+      "prefix": "fp",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
