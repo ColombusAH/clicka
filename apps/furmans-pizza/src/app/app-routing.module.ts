@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutComponent } from '@furmans/shred-ui';
+import { FullLayoutComponent } from './core/components/full-layout/full-layout.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
     path: '',
-    component: LayoutComponent,
+    component: FullLayoutComponent,
     children: [
       {
         path: 'home',
