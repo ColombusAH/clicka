@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+import { SidebarLinkDirective } from './directives/sidebar-link.directive';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     SidebarComponent,
     LayoutComponent,
+    SidebarLinkDirective,
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -19,6 +21,7 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     SidebarComponent,
     LayoutComponent,
+    SidebarLinkDirective,
   ],
 })
 export class LayoutModule {}

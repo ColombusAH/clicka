@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ContentChild, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'furrmans-header',
@@ -6,4 +6,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  @ContentChild(TemplateRef) template!: TemplateRef<unknown> ;
+}

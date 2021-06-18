@@ -1,4 +1,12 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  ComponentRef,
+  ViewChild,
+  Input,
+} from '@angular/core';
+import { HeaderComponent } from './components/header/header.component';
+import { Orientation } from './types';
 
 @Component({
   selector: 'furrmans-layout',
@@ -6,4 +14,8 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./layout.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LayoutComponent {}
+export class LayoutComponent {
+  @ViewChild(HeaderComponent) header!: ComponentRef<HeaderComponent>;
+
+  @Input() orientation: Orientation = 'rtl';
+}

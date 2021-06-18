@@ -1,4 +1,13 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  ContentChildren,
+  QueryList,
+  AfterContentInit,
+  Input,
+} from '@angular/core';
+import { SidebarLinkDirective } from '../../directives';
+import { Orientation } from '../../types';
 
 @Component({
   selector: 'furrmans-sidebar',
@@ -6,4 +15,14 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   styles: [' :host {position: relative;}'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SidebarComponent {}
+export class SidebarComponent implements AfterContentInit {
+  @ContentChildren(SidebarLinkDirective, {read: SidebarLinkDirective})
+  links!: QueryList<SidebarLinkDirective>;
+  @Input() orientation: Orientation = 'rtl';
+
+  ngAfterContentInit(): void {
+    console.log('[SidebarComponent] ngAfterContentInit');
+
+    console.log(this.links.first.template);
+  }
+}
