@@ -38,6 +38,16 @@
       "sourceRoot": "apps/furmans-pizza/src",
       "prefix": "furrmans",
       "architect": {
+        "compodoc": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+                "command": "compodoc -p apps/furmans-pizza/tsconfig.doc.json"
+              }
+            ]
+          }
+        },
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "outputs": ["{options.outputPath}"],
@@ -223,6 +233,16 @@
       "sourceRoot": "libs/shared-ui/src",
       "prefix": "furrmans",
       "architect": {
+        "compodoc": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+                "command": "compodoc -p libs/shared-ui/tsconfig.doc.json"
+              }
+            ]
+          }
+        },
         "build": {
           "builder": "@nrwl/angular:package",
           "outputs": ["dist/libs/shared-ui"],
