@@ -1,0 +1,8 @@
+<div class="w-screen h-screen flex flex-col">
+  <furrmans-header></furrmans-header>
+  <div class="main-content" [ngClass]="{ 'flex-row-reverse': true }">
+    <furrmans-sidebar></furrmans-sidebar>
+    <router-outlet></router-outlet>
+  </div>
+  <furrmans-footer></furrmans-footer>
+</div>

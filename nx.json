@@ -14,12 +14,7 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "YmZmNjlkM2ItYjRlZi00YjBmLTg5MzMtYmJiNWZiNTRhOWU5fHJlYWQtd3JpdGU=",
         "canTrackAnalytics": false,
         "showUsageWarnings": true
@@ -32,15 +27,16 @@
     },
     "furmans-pizza-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "furmans-pizza"
-      ]
+      "implicitDependencies": ["furmans-pizza"]
     },
     "api": {
       "tags": []
     },
     "api-interfaces": {
       "tags": []
+    },
+    "shared-ui": {
+      "tags": ["shared"]
     }
   }
 }
