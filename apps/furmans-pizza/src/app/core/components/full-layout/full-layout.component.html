@@ -1,5 +1,23 @@
-<furrmans-layout orientation="rtl">
-  <furrmans-sidebar role="sidebar" orientation="rtl">
-    <div *furrmansSidebarLink><span>link test</span></div>
+<furrmans-layout [orientation]="languageOrientation">
+  <furrmans-sidebar role="sidebar" [orientation]="languageOrientation">
+    <div *furrmansSidebarLink>
+      <button
+        class="
+          bg-transparent
+          hover:bg-blue-500
+          text-blue-700
+          font-semibold
+          hover:text-white
+          py-2
+          px-4
+          border border-blue-500
+          hover:border-transparent
+          rounded
+        "
+        (click)="changeLanguageOrientation()"
+      >
+        change language
+      </button>
+    </div>
   </furrmans-sidebar>
 </furrmans-layout>
