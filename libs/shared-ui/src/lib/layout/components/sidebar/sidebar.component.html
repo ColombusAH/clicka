@@ -3,13 +3,11 @@
     class="flex flex-col flex-auto items-start"
     [ngClass]="{ 'items-end': orientation === 'rtl' }"
   >
-    <ul>
-      <li *ngFor="let link of links; index as i">
-        <ng-container
-          [ngTemplateOutlet]="link.template"
-          [ngTemplateOutletContext]="{ $implicit: link.path, idx: i }"
-        ></ng-container>
-      </li>
-    </ul>
+    <ng-container *ngFor="let item of items; index as i">
+      <ng-container
+        [ngTemplateOutlet]="item.template"
+        [ngTemplateOutletContext]="{ $implicit: item.data, idx: i }"
+      ></ng-container>
+    </ng-container>
   </div>
 </div>

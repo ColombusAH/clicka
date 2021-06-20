@@ -1,8 +1,9 @@
 <furrmans-layout [orientation]="languageOrientation">
   <furrmans-sidebar role="sidebar" [orientation]="languageOrientation">
-    <div *furrmansSidebarLink>
+    <div *furrmansSidebarItem>
       <button
         class="
+          w-40
           bg-transparent
           hover:bg-blue-500
           text-blue-700
@@ -19,5 +20,6 @@
         change language
       </button>
     </div>
+    <span *furrmansSidebarItem> simple span  </span>
   </furrmans-sidebar>
 </furrmans-layout>

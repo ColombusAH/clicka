@@ -5,7 +5,7 @@ import {
   QueryList,
   Input,
 } from '@angular/core';
-import { SidebarLinkDirective } from '../../directives';
+import { SidebarItemDirective } from '../../directives';
 import { Orientation } from '../../types';
 
 @Component({
@@ -15,7 +15,7 @@ import { Orientation } from '../../types';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidebarComponent {
-  @ContentChildren(SidebarLinkDirective, { read: SidebarLinkDirective })
-  links!: QueryList<SidebarLinkDirective>;
+  @ContentChildren(SidebarItemDirective, { read: SidebarItemDirective })
+  items!: QueryList<SidebarItemDirective>;
   @Input() orientation: Orientation = 'rtl';
 }
