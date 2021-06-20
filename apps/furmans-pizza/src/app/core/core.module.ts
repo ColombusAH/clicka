@@ -1,20 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LayoutModule } from '@furmans/shred-ui';
-import { FullLayoutComponent } from './components/full-layout/full-layout.component';
 
-
-
+// not by mistake , core should only contains Shared Application logic.
 @NgModule({
-  declarations: [
-    FullLayoutComponent
-  ],
-  imports: [
-    CommonModule,
-    LayoutModule
-  ],
-  exports: [
-    FullLayoutComponent
-  ]
+  providers: [],
 })
-export class CoreModule { }
+export class CoreModule {}
