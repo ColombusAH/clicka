@@ -9,7 +9,7 @@ import { SidebarItemDirective } from '../../directives';
 import { Orientation } from '../../types';
 
 @Component({
-  selector: 'furrmans-sidebar',
+  selector: 'clicka-sidebar',
   templateUrl: './sidebar.component.html',
   styles: [' :host {position: relative;}'],
   changeDetection: ChangeDetectionStrategy.OnPush,

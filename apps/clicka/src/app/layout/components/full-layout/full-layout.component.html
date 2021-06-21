@@ -1,7 +1,7 @@
-<furrmans-layout [orientation]="languageOrientation">
-  <furrmans-sidebar role="sidebar" [orientation]="languageOrientation">
+<clicka-layout [orientation]="languageOrientation">
+  <clicka-sidebar role="sidebar" [orientation]="languageOrientation">
     <ng-container *ngFor="let link of links">
-      <ng-template [furrmansSidebarItem]>
+      <ng-template [clickaSidebarItem]>
         <a
           [routerLink]="link.path"
           class="
@@ -33,7 +33,7 @@
         </a>
       </ng-template>
     </ng-container>
-    <!-- <div *furrmansSidebarItem>
+    <!-- <div *clickaSidebarItem>
       <button
         class="
           w-40
@@ -53,6 +53,6 @@
         change language
       </button>
     </div>
-    <span *furrmansSidebarItem> simple span </span> -->
-  </furrmans-sidebar>
-</furrmans-layout>
+    <span *clickaSidebarItem> simple span </span> -->
+  </clicka-sidebar>
+</clicka-layout>

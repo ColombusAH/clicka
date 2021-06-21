@@ -1,7 +1,7 @@
 import { Directive, Input, TemplateRef } from '@angular/core';
 
 @Directive({
-  selector: '[furrmansSidebarItem]',
+  selector: '[clickaSidebarItem]',
 })
 export class SidebarItemDirective<T = unknown> {
   @Input() data!: T;

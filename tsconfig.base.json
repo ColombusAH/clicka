@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@furrmans/api-interfaces": ["libs/api-interfaces/src/index.ts"],
-      "@furmans/shred-ui": ["libs/shared-ui/src/index.ts"]
+      "@clicka/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@clicka/shred-ui": ["libs/shared-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

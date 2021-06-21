@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Message } from '@furrmans/api-interfaces';
+import { Message } from '@clicka/api-interfaces';
 
 @Injectable()
 export class AppService {

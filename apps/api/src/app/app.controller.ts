@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-import { Message } from '@furrmans/api-interfaces';
+import { Message } from '@clicka/api-interfaces';
 
 import { AppService } from './app.service';
 

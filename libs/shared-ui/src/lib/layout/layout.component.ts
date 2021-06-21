@@ -9,7 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { Orientation } from './types';
 
 @Component({
-  selector: 'furrmans-layout',
+  selector: 'clicka-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

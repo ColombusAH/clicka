@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Message } from '@furrmans/api-interfaces';
+import { Message } from '@clicka/api-interfaces';
 
 @Component({
-  selector: 'furrmans-root',
+  selector: 'clicka-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

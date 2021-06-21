@@ -9,7 +9,7 @@
   "affected": {
     "defaultBase": "master"
   },
-  "npmScope": "furrmans",
+  "npmScope": "clicka",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
@@ -22,12 +22,12 @@
     }
   },
   "projects": {
-    "furmans-pizza": {
+    "clicka": {
       "tags": []
     },
-    "furmans-pizza-e2e": {
+    "clicka-e2e": {
       "tags": [],
-      "implicitDependencies": ["furmans-pizza"]
+      "implicitDependencies": ["clicka"]
     },
     "api": {
       "tags": []

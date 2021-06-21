@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { OnChanges, SimpleChange, Orientation } from '@furmans/shred-ui';
+import { OnChanges, SimpleChange, Orientation } from '@clicka/shred-ui';
 
 @Component({
-  selector: 'furrmans-full-layout',
+  selector: 'clicka-full-layout',
   templateUrl: './full-layout.component.html',
   styleUrls: ['./full-layout.component.scss'],
 })

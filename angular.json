@@ -3,7 +3,7 @@
   "cli": {
     "defaultCollection": "@nrwl/angular"
   },
-  "defaultProject": "furmans-pizza",
+  "defaultProject": "clicka",
   "schematics": {
     "@nrwl/angular": {
       "application": {
@@ -32,18 +32,18 @@
     }
   },
   "projects": {
-    "furmans-pizza": {
+    "clicka": {
       "projectType": "application",
-      "root": "apps/furmans-pizza",
-      "sourceRoot": "apps/furmans-pizza/src",
-      "prefix": "furrmans",
+      "root": "apps/clicka",
+      "sourceRoot": "apps/clicka/src",
+      "prefix": "clicka",
       "architect": {
         "compodoc": {
           "builder": "@nrwl/workspace:run-commands",
           "options": {
             "commands": [
               {
-                "command": "compodoc -p apps/furmans-pizza/tsconfig.doc.json"
+                "command": "compodoc -p apps/clicka/tsconfig.doc.json"
               }
             ]
           }
@@ -52,17 +52,17 @@
           "builder": "@angular-devkit/build-angular:browser",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/apps/furmans-pizza",
-            "index": "apps/furmans-pizza/src/index.html",
-            "main": "apps/furmans-pizza/src/main.ts",
-            "polyfills": "apps/furmans-pizza/src/polyfills.ts",
-            "tsConfig": "apps/furmans-pizza/tsconfig.app.json",
+            "outputPath": "dist/apps/clicka",
+            "index": "apps/clicka/src/index.html",
+            "main": "apps/clicka/src/main.ts",
+            "polyfills": "apps/clicka/src/polyfills.ts",
+            "tsConfig": "apps/clicka/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "apps/furmans-pizza/src/favicon.ico",
-              "apps/furmans-pizza/src/assets"
+              "apps/clicka/src/favicon.ico",
+              "apps/clicka/src/assets"
             ],
-            "styles": ["apps/furmans-pizza/src/styles.scss"],
+            "styles": ["apps/clicka/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -81,8 +81,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "apps/furmans-pizza/src/environments/environment.ts",
-                  "with": "apps/furmans-pizza/src/environments/environment.prod.ts"
+                  "replace": "apps/clicka/src/environments/environment.ts",
+                  "with": "apps/clicka/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -102,64 +102,64 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "furmans-pizza:build:production"
+              "browserTarget": "clicka:build:production"
             },
             "development": {
-              "browserTarget": "furmans-pizza:build:development"
+              "browserTarget": "clicka:build:development"
             }
           },
           "defaultConfiguration": "development",
           "options": {
-            "proxyConfig": "apps/furmans-pizza/proxy.conf.json"
+            "proxyConfig": "apps/clicka/proxy.conf.json"
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "furmans-pizza:build"
+            "browserTarget": "clicka:build"
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/furmans-pizza/src/**/*.ts",
-              "apps/furmans-pizza/src/**/*.html"
+              "apps/clicka/src/**/*.ts",
+              "apps/clicka/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/furmans-pizza"],
+          "outputs": ["coverage/apps/clicka"],
           "options": {
-            "jestConfig": "apps/furmans-pizza/jest.config.js",
+            "jestConfig": "apps/clicka/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "furmans-pizza-e2e": {
-      "root": "apps/furmans-pizza-e2e",
-      "sourceRoot": "apps/furmans-pizza-e2e/src",
+    "clicka-e2e": {
+      "root": "apps/clicka-e2e",
+      "sourceRoot": "apps/clicka-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/furmans-pizza-e2e/cypress.json",
-            "tsConfig": "apps/furmans-pizza-e2e/tsconfig.e2e.json",
-            "devServerTarget": "furmans-pizza:serve:development"
+            "cypressConfig": "apps/clicka-e2e/cypress.json",
+            "tsConfig": "apps/clicka-e2e/tsconfig.e2e.json",
+            "devServerTarget": "clicka:serve:development"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "furmans-pizza:serve:production"
+              "devServerTarget": "clicka:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/furmans-pizza-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["apps/clicka-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -231,7 +231,7 @@
       "projectType": "library",
       "root": "libs/shared-ui",
       "sourceRoot": "libs/shared-ui/src",
-      "prefix": "furrmans",
+      "prefix": "clicka",
       "architect": {
         "compodoc": {
           "builder": "@nrwl/workspace:run-commands",

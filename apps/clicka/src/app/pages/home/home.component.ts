@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'furrmans-home',
+  selector: 'clicka-home',
   templateUrl: './home.component.html',
   styles: [':host { width: 100%;} '],
 })

@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, ContentChild, TemplateRef } from '@angular/core';
 
 @Component({
-  selector: 'furrmans-header',
+  selector: 'clicka-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
