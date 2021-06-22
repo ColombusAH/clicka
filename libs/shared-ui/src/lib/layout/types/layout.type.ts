@@ -1,1 +1,1 @@
-export type Orientation = 'rtl' | 'ltr';
+export type LanguageDirection = 'rtl' | 'ltr';

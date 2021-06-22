@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { OnChanges, SimpleChange, Orientation } from '@clicka/shred-ui';
+import { Component } from '@angular/core';
+import { LanguageDirectionService } from '@clicka/shred-ui';
 
 @Component({
   selector: 'clicka-full-layout',
@@ -7,22 +7,17 @@ import { OnChanges, SimpleChange, Orientation } from '@clicka/shred-ui';
   styleUrls: ['./full-layout.component.scss'],
 })
 export class FullLayoutComponent {
-  @Input()
-  @OnChanges<Orientation>(
-    (val: Orientation, change?: SimpleChange<Orientation>) => {
-      console.log({ val });
-      console.log({ change });
-    }
-  )
-  languageOrientation: Orientation = 'ltr';
-
   // to move - poc
   links: { path: string; text: string }[] = [
     { path: '/home', text: 'home' },
     { path: '/login', text: 'login' },
   ];
+
+  constructor(
+    private readonly languageDirectionService: LanguageDirectionService
+  ) {}
+
   changeLanguageOrientation() {
-    this.languageOrientation =
-      this.languageOrientation === 'rtl' ? 'ltr' : 'rtl';
+    this.languageDirectionService.changeLanguageDirection();
   }
 }

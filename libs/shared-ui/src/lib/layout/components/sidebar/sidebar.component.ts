@@ -3,10 +3,8 @@ import {
   ChangeDetectionStrategy,
   ContentChildren,
   QueryList,
-  Input,
 } from '@angular/core';
 import { SidebarItemDirective } from '../../directives';
-import { Orientation } from '../../types';
 
 @Component({
   selector: 'clicka-sidebar',
@@ -17,5 +15,5 @@ import { Orientation } from '../../types';
 export class SidebarComponent {
   @ContentChildren(SidebarItemDirective, { read: SidebarItemDirective })
   items!: QueryList<SidebarItemDirective>;
-  @Input() orientation: Orientation = 'rtl';
+
 }

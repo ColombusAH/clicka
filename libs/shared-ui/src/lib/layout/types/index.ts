@@ -1,1 +1,1 @@
-export { Orientation } from './layout.type';
+export { LanguageDirection } from './layout.type';

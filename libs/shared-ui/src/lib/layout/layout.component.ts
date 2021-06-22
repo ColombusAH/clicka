@@ -3,11 +3,8 @@ import {
   ChangeDetectionStrategy,
   ComponentRef,
   ViewChild,
-  Input,
 } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
-import { Orientation } from './types';
-
 @Component({
   selector: 'clicka-layout',
   templateUrl: './layout.component.html',
@@ -16,6 +13,4 @@ import { Orientation } from './types';
 })
 export class LayoutComponent {
   @ViewChild(HeaderComponent) header!: ComponentRef<HeaderComponent>;
-
-  @Input() orientation: Orientation = 'rtl';
 }
