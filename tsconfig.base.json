@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@clicka/api-interfaces": ["libs/api-interfaces/src/index.ts"],
-      "@clicka/shred-ui": ["libs/shared-ui/src/index.ts"]
+      "@clicka/shred-ui": ["libs/shared-ui/src/index.ts"],
+      "@clicka-app/*": ["apps/clicka/src/app/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

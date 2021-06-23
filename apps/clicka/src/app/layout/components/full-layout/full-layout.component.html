@@ -1,9 +1,9 @@
 <clicka-layout>
   <clicka-sidebar role="sidebar">
-    <ng-container *ngFor="let link of links">
+    <ng-container>
       <ng-template [clickaSidebarItem]>
         <a
-          [routerLink]="link.path"
+          routerLink=""
           class="
             w-full
             block
@@ -29,7 +29,7 @@
             focus:outline-none
             focus:shadow-outline
           "
-          >{{ link.text }}
+          >Home
         </a>
       </ng-template>
     </ng-container>
