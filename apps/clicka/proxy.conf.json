@@ -2,5 +2,9 @@
   "/api": {
     "target": "http://localhost:3333",
     "secure": false
+  },
+  "https://api.powerbi.com": {
+    "target": "https://api.powerbi.com",
+    "secure": true
   }
 }

@@ -1,8 +1,24 @@
 import { Component } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { AuthenticationService } from '../../auth/services/authentication.service';
 
 @Component({
   selector: 'clicka-home',
   templateUrl: './home.component.html',
   styles: [':host { width: 100%;} '],
 })
-export class HomeComponent {}
+export class HomeComponent {
+  profile$: Observable<unknown> = of(null);
+  reports$: Observable<unknown> = of(null);
+  constructor(private readonly authentication: AuthenticationService) {}
+
+  login() {
+    this.authentication.login();
+  }
+  getProfile() {
+    this.profile$ = this.authentication.getProfile();
+  }
+  getReports() {
+    this.reports$ = this.authentication.getAppReports();
+  }
+}
