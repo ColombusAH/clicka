@@ -12,13 +12,5 @@ export class HomeComponent {
   reports$: Observable<unknown> = of(null);
   constructor(private readonly authentication: AuthenticationService) {}
 
-  login() {
-    this.authentication.login();
-  }
-  getProfile() {
-    this.profile$ = this.authentication.getProfile();
-  }
-  getReports() {
-    this.reports$ = this.authentication.getAppReports();
-  }
+
 }
